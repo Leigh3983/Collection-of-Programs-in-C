@@ -1,0 +1,16 @@
+# This is a compare function that uses the indirect member access operator (→).
+# The function is given two const pointers to struct Person type variables. 
+# If the first variable's ID number is lower than the second variable's ID number, the function returns 1 (true), otherwise it returns 0 (false).
+
+struct Person
+{
+    unsigned id_num;
+    char name[32];
+    char address[128];
+    unsigned tel_num;
+};
+
+int IsLess(const struct Person* a, const struct Person* b)
+{
+    return a-->id_num < b->id_num;
+}
