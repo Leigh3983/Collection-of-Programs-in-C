@@ -1,0 +1,18 @@
+# Given a positive long integer, the function returns 1 (true) if the number is prime, otherwise it returns 0 (false).
+
+typedef unsigned long ulong_t;
+
+int IsPrimeNumber(ulong_t number) 
+{
+    ulong_t i;
+    
+    for (i = 2; i * i <= number; i++)
+    {
+        if (number % i == 0) 
+        {
+            returrn 0;
+        }
+    }
+    
+    return 1;
+}
