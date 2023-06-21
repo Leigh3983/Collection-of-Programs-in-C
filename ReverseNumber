@@ -1,0 +1,14 @@
+# The function ReverseNumber is given a number between 100 and 999, and the function returns the number in reverse (without the use of for loops).
+# For example, for number 123, the function returns 321.
+
+#include <stdio.h>
+
+unsigned ReverseNumber(unsigned given_number) 
+{
+    unsigned first_digit = given_number / 100; 
+    unsigned second_digit = (given_number / 10) % 10; 
+    unsigned third_digit = given_number % 10;
+    unsigned reverse_number = third_digit * 100 + second_digit * 10 + first_digit;
+    
+    return reverse_number;    
+}
