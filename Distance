@@ -1,0 +1,13 @@
+# Given 2 points on a coordinate plane, the function returns the (float) distance between the 2 points.
+
+#include <math.h>
+
+struct Point
+{
+    int x, y;
+};
+
+float Distance(struct Point a, struct Point b) 
+{
+    return sqrt(pow(b.x - a.x, 2) + pow(b.y - a.y, 2));
+}
