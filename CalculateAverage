@@ -1,0 +1,21 @@
+# Given an array of integers and the number of items, the function returns the rounded (to the nearest integer) average of the numbers.
+
+#include <stddef.h>
+
+int CalculateAverage(const int array[], size_t size) 
+{
+    size_t i = 0;
+    long total = 0;
+    
+    if (size == 0)
+    {
+        return 0;
+    }
+    
+    for (i = 0, total = 0; i < size; i++) 
+    {
+        total += array[i];
+    }
+    
+    return (int)((float)total / size + 0.5);
+}
