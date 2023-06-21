@@ -1,0 +1,24 @@
+# Given an index (n), the function returns the value of the n-th element in the Fibonacci Sequence.
+
+#include <stdio.h>
+
+unsigned Fibonacci(unsigned n) 
+{
+    int i,prev_index;
+    unsigned index_minus_1 = 0;
+    unsigned current_index = 1; 
+    
+    if (n == 0) 
+    {
+        return 0;
+    }
+    
+    for (i=1;i<=n;i++) 
+    {
+        prev_index = current_index;
+        current_index = current_index + index_minus_1;  
+        index_minus_1 = prev_index;         
+    }  
+    
+    return prev_index;    
+} 
