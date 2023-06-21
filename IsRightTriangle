@@ -1,0 +1,52 @@
+# Given the lengths of the 3 edges of a triangle, the function returns 1 (true) if the triangle is 'right-angled', otherwise it returns 0 (false).
+# The lengths of the edges can be given to the function in any order. 
+
+#include <stdio.h>
+
+int IsRightTriangle(float edge1, float edge2, float edge3) 
+{
+    double sum_of_edges_1_2_squared = edge1 * edge1 + edge2 * edge2;
+    double sum_of_edges_1_3_squared = edge1 * edge1 + edge3 * edge3;
+    double sum_of_edges_2_3_squared = edge2 * edge2 + edge3 * edge3; 
+     
+    if (edge3 > edge1 && edge3 > edge2) 
+    {
+       if (um_of_edges_1_2_squared - edge3 * edge3 < 0.05 && sum_of_edges_1_2_squared - edge3 * edge3 > -0.05) 
+       {
+        	return 1;
+    	 }
+       else 
+       {
+          return 0;
+       }
+    }
+    
+    else if (edge2 > edge3 && edge2 > edge1) 
+    {
+       if (sum_of_edges_1_3_square - edge2 * edge2 < 0.05 && sum_of_edges_1_3_squared - edge2 * edge2 > -0.05) 
+       {
+          return 1;
+    	 }
+       else 
+       {
+          return 0;
+       }
+    }
+    
+    else if (edge1 > edge2 && edge1 > edge3) 
+    {
+       if (sum_of_edges_2_3_squared - edge1 * edge1 < 0.05 && sum_of_edges_2_3_squared - edge1 * edge1 > -0.05) 
+       {
+          return 1;
+       }
+       else 
+       {
+          return 0;
+       }
+   }
+    
+   else
+   {
+      return 0;
+   }
+}
