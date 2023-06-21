@@ -1,0 +1,25 @@
+# The function converts a string to an integer using ASCII code.  
+
+#include <stddef.h>
+#include <assert.h>
+
+int StringToInteger(const char* numStr)
+{
+    int num = 0, sign = 1;
+    
+    assert(numStr != NULL);
+    
+    if (*numStr == '-')
+    {
+        numStr++;
+        sign = -1;
+    }
+    
+    for (; *numStr >= '0' && *numStr <= '9'; numStr++)
+    {
+        num = num * 10 + *numStr - '0';
+    }
+    
+    return num * sign;
+} 
+
