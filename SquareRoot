@@ -1,0 +1,20 @@
+# Given a non-negative float number, the function returns the square root of the number without using any library functions.
+
+float SquareRoot(float number) 
+{
+    float sqrt = number / 2;
+    float temp = 0;
+    
+    if (number == 1) 
+    {
+        return 1;
+    }
+    
+    do 
+    {
+       temp = sqrt;
+    	 sqrt = (sqrt + number / sqrt) / 2;
+    } while (sqrt != temp); 
+    
+    return sqrt;
+}  
