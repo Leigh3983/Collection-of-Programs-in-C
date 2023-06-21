@@ -1,0 +1,21 @@
+# The function is given 3 parameters: an array of integers, the number of items and an integer value (the element) to search the array with. 
+# The function returns the first index at which the given element is found in the array, or -1 if it is not present.
+# For example, the index of the element 56 in the array [12, 45, 32, 56, 27] is 3.
+
+#include <stddef.h>
+#include <stdio.h>
+
+size_t IndexOf(const int array[], size_t size, int element) 
+{
+    size_t i;
+    
+    for (i=0;i<=size;i++) 
+    {
+        if (array[i] == element) 
+        {
+            return i;
+        } 
+    }
+    
+    return -1;  
+}
