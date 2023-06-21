@@ -1,4 +1,4 @@
-# Simple-programs-in-C
+# Collection of Programs in C
 A collection of functions that manipulate elements and uses computational and mathematical applications to find meaningful insights within data.
 
 Projects:
