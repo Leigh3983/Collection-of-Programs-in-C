@@ -1,0 +1,25 @@
+# Given an array of integers, the size of the array, and the size of a segment in the array, the function moves the initial segment of consecutive array elements to the end of the array. 
+# The elements that follow the segment are all moved to the left. The elements in the are moved in place.
+# The function does not use an auxiliary array, but rather only uses a single temporary int variable.
+# For example: Given the array 3, 7, 2, 8, 5, 9, 1, 4: The result of moving the initial segment that includes 3 elements (i.e., [3, 7, 2]) is 8, 5, 9, 1, 4, 3, 7, 2.
+
+#include <stddef.h>
+#include <stdio.h> 
+
+void MoveElements(int array[], size_t size, size_t count) 
+{
+    size_t i,j;
+    int temp;
+    
+    for (i = 0; i < count; i++) 
+    {
+        temp = array[0];
+        
+        for (j = 0; j < size; j++) 
+        {
+            array[j] = array[j+1];
+        }
+        
+        array[size-1] = temp;        
+    }  
+}
