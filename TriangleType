@@ -1,0 +1,39 @@
+# The function is given 2 positive integers representing 2 angles of a triangle. 
+# If the triangle is right, isosceles, or both, the function returns 1, 2 or 3, respectively. Otherwise it returns 0.
+
+#include <assert.h>
+#include <stdio.h>
+
+int TriangleType(unsigned angle1, unsigned angle2) 
+{
+    if (angle1 >= 180 || angle2 >= 180 || angle1+angle2 >= 180) 
+    {
+        return -1;
+    }
+    
+    else if (angle1 == 90 || angle2 == 90 || angle1 + angle2 == 90 || 180-(angle1+angle2) == 90) 
+    {
+        if (angle1 == angle2 || angle1 == 180-(angle1+angle2) || angle2 == 180-(angle1+angle2)) 
+        {
+        # triangle is both Right and Isosceles 
+            return 3;
+        }
+        # triangle is Right but not Isosceles 
+        else 
+        {
+        return 1;
+        }
+    }  
+    
+    else if (angle1 == angle2 || angle1 == 180-(angle1+angle2) || angle2 == 180-(angle1+angle2)) 
+    {
+    # triangle is Isosceles but not right 
+        return 2;
+    }  
+    
+	  else 
+    {
+        return 0;
+    }
+}
+
