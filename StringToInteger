@@ -17,7 +17,7 @@ int StringToInteger(const char* numStr)
     
     for (; *numStr >= '0' && *numStr <= '9'; numStr++)
     {
-        num = num * 10 + *numStr - '0';
+        num = num * 10 + *numStr - '0'; # The ASCII value of '0' is 48. You must subtract the value to get the actual integer value
     }
     
     return num * sign;
